@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Setting character encoding and title for the extension popup -->
+  <meta charset="UTF-8">
+  <title>News Credibility Estimator</title>
+
+  <!-- Inline CSS for styling the popup -->
+  <style>
+    /* General styling for the popup container */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Makes sure content is vertically centered */
+      background-color: #f1f5f8; /* Light, neutral background */
+    }
+
+    /* Main container for the popup content */
+    .popup-container {
+      width: 320px;
+      height: 540px;
+      background-color: #bacedf;
+      font-family: 'Arimo', sans-serif; /* Font for consistency */
+      padding: 20px; /* Adds space around the content inside the container */
+      box-sizing: border-box;
+      border-radius: 20px; /* Rounds the container corners */
+      overflow: hidden;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for a floating effect */
+    }
+
+    /* Title styling */
+    h1 {
+      margin-top: 0;
+      font-size: 1.6em;
+      font-weight: bold;
+      text-align: center;
+      color: #2d4f6c; /* Darker color for contrast */
+    }
+
+    /* Styling for the textarea where users input text */
+    #inputText {
+      width: 100%;
+      height: 70%; /* Takes up 70% of container height */
+      background-color: #f8edea;
+      border-radius: 10px;
+      padding: 12px; /* Space inside the textarea */
+      box-sizing: border-box;
+      resize: none; /* Disables manual resizing */
+      font-family: inherit; /* Matches the container's font */
+      font-size: 1em;
+      color: #333; /* Darker text color for readability */
+      border: 1px solid #ccc;
+      outline: none; /* Removes focus outline */
+    }
+
+    /* Placeholder text styling inside textarea */
+    #inputText::placeholder {
+      color: #aaa; /* Light gray for the placeholder text */
+    }
+
+    /* Styling for the Analyze button */
+    #checkBtn {
+      background-color: #6fa3c8; /* Blue background */
+      margin-top: 15px;
+      width: 100%; /* Full width inside container */
+      padding: 12px;
+      border: none;
+      border-radius: 10px; /* Rounds button corners */
+      color: white;
+      font-size: 1em;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background-color 0.3s; /* Smooth color transition on hover */
+    }
+
+    /* Button hover effect for interactivity */
+    #checkBtn:hover {
+      background-color: #5788a1;
+    }
+
+    /* Disabled button styling (e.g., while analyzing) */
+    #checkBtn:disabled {
+      background-color: #ddd;
+      cursor: not-allowed; /* Changes cursor to indicate disabled state */
+    }
+
+    /* Styling for the result text */
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 1em;
+      text-align: center; /* Centers the result text */
+    }
+
+    /* Green text for credible content result */
+    .credible {
+      color: #4caf50; /* Green color */
+    }
+
+    /* Red text for non-credible content result */
+    .non-credible {
+      color: #f44336; /* Red color */
+    }
+  </style>
+</head>
+<body>
+  <!-- Popup container that holds all content -->
+  <div class="popup-container">
+    <!-- Title of the popup, centered and styled -->
+    <h1>News Credibility Estimator</h1>
+
+    <!-- Text area for user input -->
+    <textarea id="inputText" rows="10" placeholder="Paste a news snippet to estimate its credibility..."></textarea>
+
+    <!-- Analyze button that triggers the analysis function -->
+    <button id="checkBtn" onclick="analyzeText()">Analyze</button>
+
+    <!-- Placeholder for displaying the analysis result -->
+    <p id="result"></p>
+  </div>
+
+  <!-- Link to JavaScript file for logic -->
+  <script src="popup.js"></script>
+
+</body>
+</html>

@@ -32,8 +32,8 @@ This Chrome extension uses an AI model to analyze news text and determine its cr
    - Ensure the backend server runs on `http://localhost:5001`.
 
 4. **Download model weights and dataset:**
-   - [Download Model Weights](https://your-drive-link.com/final_model.weights.h5)
-   - [Download WELFake Dataset](https://your-drive-link.com/WELFake_Dataset.xlsx)
+   - [Download Model Weights](https://drive.google.com/file/d/13-zOvZfgX4vRhnr-zvBnvsMrtJbEHQ2I/view?usp=sharing)
+   - [Download WELFake Dataset](https://docs.google.com/spreadsheets/d/16ku6OGw9qdOtblocR6a0e4gekcM--aoY/edit?usp=sharing&ouid=106831316560089013652&rtpof=true&sd=true)
    - Place the files in the appropriate locations:
      - `model/final_model.weights.h5`
      - `WELFake_Dataset.xlsx`
